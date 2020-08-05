@@ -1,0 +1,14 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
