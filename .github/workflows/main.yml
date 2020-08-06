@@ -18,9 +18,14 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION }}
 
-  invalidate_cache: 
+  invalidate_cache:
+    runs-on: ubuntu-latest
     steps:
-    -name: Invalidate CloudFront cache
-    run:
-      command: |
-      aws cloudfront create-invalidation --distribution-id EHI7XMLM1K1WX --paths "/*"
+    - uses: actions/checkout@master
+    - uses: awact/cloudfront-action@master
+      env:
+        SOURCE_PATH: './*'
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
