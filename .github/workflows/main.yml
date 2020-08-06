@@ -21,6 +21,5 @@ on:
     invalidate_cache:
       steps:
       - run:
-        name: "Invalidate CloudFront Cache"
-          command: |
-            aws cloudfront create-invalidation --distribution-id EHI7XMLM1K1WX --paths "/*"
+         command: |
+           aws cloudfront create-invalidation --distribution-id EHI7XMLM1K1WX --paths "/*"
