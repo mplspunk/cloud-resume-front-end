@@ -6,3 +6,5 @@ Here is my [blog post](https://dev.to/crehmzola/the-silver-lining-in-the-cloud-r
 
 ### Architectural Diagram
 <img src="https://github.com/mplspunk/cloud-resume-front-end/blob/master/front-end-diagram.png" width=600><br>
+
+Original template code from [Start Bootstrap Resume](https://github.com/startbootstrap/startbootstrap-resume)
